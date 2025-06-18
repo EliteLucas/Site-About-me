@@ -1,0 +1,12 @@
+# Ignorar sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar pastas de dependências
+
+# Ignorar logs
+*.log
+
+# Outros arquivos temporários
+*.env
+*.tmp
