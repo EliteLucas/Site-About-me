@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre mim</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <button id="trocar-tema" aria-label="Troca entre o modo noturno (fundo escuro) e modo claro (fundo branco)">
-        <!-- Ícone modo claro-->
-        <svg xmls="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 24 24"">
-            <path path fill-rule="evenodd" d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z" clip-rule="evenodd"/>
-        </svg>
-        <!-- Ícone modo escuro-->
-        <svg xmls="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 24 24">
-            <path d="M21.75 15.5a9.26 9.26 0 01-11.27-11.27 1 1 0 00-1.23-1.23A10.75 10.75 0 1023 16.73a1 1 0 00-1.25-1.23z"/>
-        </svg>
-        
-    </button>
+    <div class="topo">
+        <button class="botao" id="trocar-tema" aria-label="Troca entre o modo noturno (fundo escuro) e modo claro (fundo branco)">
+            <!-- Ícone modo claro-->
+            <svg id="icone-sol" xmls="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 24 24"">
+                <path path fill-rule="evenodd" d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z" clip-rule="evenodd"/>
+            </svg>
+            <!-- Ícone modo escuro-->
+            <svg id="icone-lua" xmls="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 24 24">
+                <path d="M21.75 15.5a9.26 9.26 0 01-11.27-11.27 1 1 0 00-1.23-1.23A10.75 10.75 0 1023 16.73a1 1 0 00-1.25-1.23z"/>
+            </svg>
+        </button>
+    </div>
+
     <h1>Lucas Orlandini</h1>
 
     <h2>Autobiografia</h2>
@@ -30,40 +34,41 @@
         sempre buscando manter a mente aberta para diferentes estilos de música e entretenimento no geral.
     </p>
 
-    <button>Clique para ver uma mensagem!</button>
+    <button class="botao">Clique para ver uma mensagem!</button>
 
     <h2>Hobbies</h2>
     <ul>
-        <li>Jogar videogame;</li>
-        <li>Aprender idiomas;</li>
-        <li>Ler.</li>
+        <li>Jogar videogame</li>
+        <li>Aprender idiomas</li>
+        <li>Leitura</li>
     </ul>
+    <figure>
+        <img id="imagem-de-texto" src="images/Playing PC games.png" alt="Pessoa jogando no computador.">
+        <figcaption>Imagem referente ao hobbie "jogar videogame", representa uma pessoa jogando no computador.</figcaption>
+    </figure>
 
-    <img src="images/Playing PC games.png" alt="Pessoa jogando no computador.">
-
-    <h2>Países que gostaria de visitar</h2>
+    <h2>Países que gostaria de visitar:</h2>
     <table>
         <tr>
             <th>Nome</th>
             <th>Imagem</th>
         </tr>
         <tr>
-            <td>Japão</td>
+            <td>🇯🇵 Japão</td>
             <td><img src="images/Japão.jpg" alt="Foto do japão vista por cima na cidade de Tokyo anoite."></td>
         </tr>
         <tr>
-            <td>Alemanha</td>
+            <td>🇩🇪 Alemanha</td>
             <td><img src="images/Alemanha.jpg" alt="Foto de ponto turistico da alemanha visto por cima."></td>
         </tr>
         <tr>
-            <td>China</td>
+            <td>🇨🇳 China</td>
             <td><img src="images/China.jpg" alt="Foto de um templo típico chines."></td>
         </tr>
     </table>
 
-    <h2>Link para site de interesse</h2>
-    <a href="https://oglobo.globo.com/economia/tecnologia/noticia/2025/06/11/nintendo-anuncia-recorde-de-vendas-do-switch-2-com-35-milhoes-de-unidades-em-quatro-dias.ghtml">Nintendo anuncia recorde de vendas do Switch 2, com 3,5 milhões de unidades em quatro dias.</a>
+    <h2>Link de interesse</h2>
+    <a class="links" href="https://oglobo.globo.com/economia/tecnologia/noticia/2025/06/11/nintendo-anuncia-recorde-de-vendas-do-switch-2-com-35-milhoes-de-unidades-em-quatro-dias.ghtml">Nintendo anuncia recorde de vendas do Switch 2, com 3,5 milhões de unidades em quatro dias.</a>
 
 </body>
-
 </html>
