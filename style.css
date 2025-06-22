@@ -12,8 +12,8 @@ body {
     --cor-principal-hover: #6ab402;
     --cor-principal-links: blue;
     --cor-principal-hover-links: red;
-    --cor-dark-principal: aquamarine;
-    --cor-dark-hover: aqua;
+    --cor-dark-principal: rgb(91, 31, 255);
+    --cor-dark-hover: rgb(54, 2, 138);
     --cor-dark-links: green;
     --cor-dark-hover-links: yellowgreen;
 }
@@ -43,6 +43,23 @@ h1 {
 p {
     font-size: 18px;
     text-align: justify;
+}
+
+#mensagem {
+    font-weight: bold;
+    background-size: 50%;
+    background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: move 2s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0%;
+    } 100% {
+        background-position: 100%;
+    }
 }
 
 li {
@@ -85,8 +102,6 @@ table {
     margin: auto;
     max-width: 100%;
 }
-
-tr:nth-child(even) {background-color: #f2f2f2;}
 
 th, td {
     text-align: center; 
