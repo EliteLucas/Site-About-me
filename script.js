@@ -61,4 +61,3 @@ document.addEventListener('DOMContentLoaded', () => {
     botaoMensagem.addEventListener('click', exibirMensagem());
     botaoTema.addEventListener('click', alternarTema);
 });
-    
