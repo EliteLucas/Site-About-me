@@ -80,18 +80,18 @@ figcaption {
     font-style: italic;
     color: gray;
     margin-top: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 
 #imagem-de-texto {
     width: 800px;
+    height: 500px;
     display: block;
     margin: auto;
 }
 
 table {
     width: 100%;
-    border-spacing: 0 20px;
 }
 
 .imagem-de-conteudo {
