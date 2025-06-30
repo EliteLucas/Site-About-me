@@ -10,90 +10,105 @@
 </head>
 
 <body>
-    <div class="topo">
+    <header>
         <button class="botao" id="trocar-tema" aria-label="Troca entre o modo noturno (fundo escuro) e modo claro (fundo branco)">
             <!-- Ícone modo claro-->
-            <svg id="icone-sol" xmls="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 24 24"">
-                <path path fill-rule="evenodd" d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z" clip-rule="evenodd"/>
+            <svg id="icone-sol" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z" clip-rule="evenodd"/>
             </svg>
             <!-- Ícone modo escuro-->
-            <svg id="icone-lua" xmls="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 24 24">
+            <svg id="icone-lua" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M21.75 15.5a9.26 9.26 0 01-11.27-11.27 1 1 0 00-1.23-1.23A10.75 10.75 0 1023 16.73a1 1 0 00-1.25-1.23z"/>
             </svg>
         </button>
-    </div>
+    </header>
 
-    <h1>Lucas Orlandini</h1>
+    <main>
+        <h1>Lucas Orlandini</h1>
 
-    <h2>Autobiografia</h2>
-    <p>
-        Meu nome é Lucas Orlandini Nunes, tenho 18 anos e moro em Santos, São Paulo. Para o bem ou para o mal, desde criança passo bastante tempo no computador, o que despertou 
-        minha curiosidade sobre como a computação funciona. Por isso, um pouco antes de concluir o ensino médio, surgiu meu interesse na área de programação e engenharia de 
-        software. Ao longo dos anos, também desenvolvi um grande interesse por jogos digitais, especialmente os competitivos online e passava horas jogando com amigos. Sempre 
-        gostei de aprender sobre a cultura de outros países e, recentemente, comecei a estudar novos idiomas, além do inglês. Me considero uma pessoa de gostos bem variados, 
-        sempre buscando manter a mente aberta para diferentes estilos de música e entretenimento no geral.
-    </p>
+        <section id="autobiografia">
+            <h2>Autobiografia</h2>
+            <p>
+                Meu nome é Lucas Orlandini Nunes, tenho 18 anos e moro em Santos, São Paulo. Para o bem ou para o mal, desde criança passo bastante tempo no computador, o que despertou 
+                minha curiosidade sobre como a computação funciona. Por isso, um pouco antes de concluir o ensino médio, surgiu meu interesse na área de programação e engenharia de 
+                software. Ao longo dos anos, também desenvolvi um grande interesse por jogos digitais, especialmente os competitivos online e passava horas jogando com amigos. Sempre 
+                gostei de aprender sobre a cultura de outros países e, recentemente, comecei a estudar novos idiomas, além do inglês. Me considero uma pessoa de gostos bem variados, 
+                sempre buscando manter a mente aberta para diferentes estilos de música e entretenimento no geral.
+            </p>
+            <!--Botão de mensagens-->
+            <button class="botao" id="botao-mensagem">Clique para ver uma mensagem!</button>
+            <p id="mensagem" aria-alive="polite"></p>
+        </section>
 
-    <button class="botao" id="botao-mensagem">Clique para ver uma mensagem!</button>
-    <p id="mensagem"></p>
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Jogar videogame</li>
+                <li>Aprender idiomas</li>
+                <li>Leitura</li>
+            </ul>
 
-    <h2>Hobbies</h2>
-    <ul>
-        <li>Jogar videogame</li>
-        <li>Aprender idiomas</li>
-        <li>Leitura</li>
-    </ul>
-    <figure>
-        <img id="imagem-de-texto" src="images/Jogando.jpg" alt="Imagem referente ao hobbie Jogar videogame. A foto apresenta mãos em cima de um teclado, a pessoa está aparentemente jogando.">
-        <figcaption>
-            Reprodução/<a class="links" href="https://www.pexels.com/pt-br/" target="_blank" rel="noopener noreferrer">Pexels</a>/<a class="links" href="https://www.pexels.com/pt-br/@rdne/" target="_blank" rel="noopener noreferrer">RDNE Stock project</a>
-        </figcaption>
-    </figure>
+            <figure>
+                <img id="imagem-de-texto" src="images/Jogando.jpg" alt="Imagem referente ao hobbie Jogar videogame. A foto apresenta mãos em cima de um teclado, a pessoa está aparentemente jogando.">
+                <figcaption>
+                    Reprodução/<a class="links" href="https://www.pexels.com/pt-br/" target="_blank" rel="noopener noreferrer">Pexels</a>/<a class="links" href="https://www.pexels.com/pt-br/@rdne/" target="_blank" rel="noopener noreferrer">RDNE Stock project</a>
+                </figcaption>
+            </figure>
+        </section>
 
-    <h2>Países que gostaria de visitar:</h2>
-    <table>
-        <tr>
-            <th>Nome</th>
-            <th>Imagem</th>
-        </tr>
-        <tr>
-            <td>🇯🇵 Japão</td>
-            <td>
-                <figure>
-                    <img class="imagem-de-conteudo" src="images/Japão.jpg" alt="Foto do castelo japonês Hijemeji visto de cima e ao redor uma paisagem natural repleta de cereijeiras.">
-                    <figcaption>
-                        Reprodução/<a class="links" href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=532850" target="_blank" rel="noopener noreferrer">Pixabay</a>/<a class="links" href="https://pixabay.com/users/nick115-10240673/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5430081" target="_blank" rel="noopener noreferrer">Nick115</a>
-                    </figcaption>
-                </figure>       
-            </td>
-        </tr>
-        <tr>
-            <td>🇩🇪 Alemanha</td>
-            <td>
-                <figure>
-                    <img class="imagem-de-conteudo" src="images/Alemanha.jpg" alt="Foto do Castelo Neuschwanstein ponto turistico da Alemanha.">
-                    <figcaption>
-                        Reprodução/<a class="links" href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=532850" target="_blank" rel="noopener noreferrer">Pixabay</a>/<a class="links" href="https://pixabay.com/users/derwiki-562673/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=532850" target="_blank" rel="noopener noreferrer">Adam Derewecki</a>
-                    </figcaption>
-                </figure>
-            </td>
-        </tr>
-        <tr>
-            <td>🇨🇳 China</td>
-            <td>
-                <figure>
-                    <img class="imagem-de-conteudo" src="images/China.jpg" alt="Foto da grande muralha da China.">
-                    <figcaption>
-                        Reprodução/<a class="links" href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=532850" target="_blank" rel="noopener noreferrer">Pixabay</a>/<a class="links" href="https://pixabay.com/users/elg21-3764790/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4055549" target="_blank" rel="noopener noreferrer">Enrique</a>
-                    </figcaption>
-                </figure>
-            </td>
-        </tr>
-    </table>
+        <section id="países">
+            <h2>Países que gostaria de visitar:</h2>
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Imagem</th>
+                </tr>
 
-    <h2>Link de interesse</h2>
-    <a class="links" href="https://oglobo.globo.com/economia/tecnologia/noticia/2025/06/11/nintendo-anuncia-recorde-de-vendas-do-switch-2-com-35-milhoes-de-unidades-em-quatro-dias.ghtml" target="_blank" rel="noopener noreferrer">Nintendo anuncia recorde de vendas do Switch 2, com 3,5 milhões de unidades em quatro dias.</a>
+                <tr>
+                    <td>🇯🇵 Japão</td>
+                    <td>
+                        <figure>
+                            <img class="imagem-de-conteudo" src="images/Japão.jpg" alt="Foto do castelo japonês Hijemeji visto de cima e ao redor uma paisagem natural repleta de cereijeiras.">
+                            <figcaption>
+                                Reprodução/<a class="links" href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=532850" target="_blank" rel="noopener noreferrer">Pixabay</a>/<a class="links" href="https://pixabay.com/users/nick115-10240673/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5430081" target="_blank" rel="noopener noreferrer">Nick115</a>
+                            </figcaption>
+                        </figure>       
+                    </td>
+                </tr>
 
-    <script src="script.js"></script>
+                <tr>
+                    <td>🇩🇪 Alemanha</td>
+                    <td>
+                        <figure>
+                            <img class="imagem-de-conteudo" src="images/Alemanha.jpg" alt="Foto do Castelo Neuschwanstein ponto turistico da Alemanha.">
+                            <figcaption>
+                                Reprodução/<a class="links" href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=532850" target="_blank" rel="noopener noreferrer">Pixabay</a>/<a class="links" href="https://pixabay.com/users/derwiki-562673/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=532850" target="_blank" rel="noopener noreferrer">Adam Derewecki</a>
+                            </figcaption>
+                        </figure>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>🇨🇳 China</td>
+                    <td>
+                        <figure>
+                            <img class="imagem-de-conteudo" src="images/China.jpg" alt="Foto da grande muralha da China.">
+                            <figcaption>
+                                Reprodução/<a class="links" href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=532850" target="_blank" rel="noopener noreferrer">Pixabay</a>/<a class="links" href="https://pixabay.com/users/elg21-3764790/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4055549" target="_blank" rel="noopener noreferrer">Enrique</a>
+                            </figcaption>
+                        </figure>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="link-de-interesse">
+            <h2>Link de interesse</h2>
+            <a class="links" href="https://oglobo.globo.com/economia/tecnologia/noticia/2025/06/11/nintendo-anuncia-recorde-de-vendas-do-switch-2-com-35-milhoes-de-unidades-em-quatro-dias.ghtml" target="_blank" rel="noopener noreferrer">Nintendo anuncia recorde de vendas do Switch 2, com 3,5 milhões de unidades em quatro dias.</a>
+        </section>
+    </main>
+
+    <script defer src="script.js"></script>
+
 </body>
 </html>

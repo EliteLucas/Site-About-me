@@ -1,3 +1,4 @@
+// Array de mensagens motivacionais
 const mensagens = [
     "Ser corajoso não é não ter medo, mas enfrentar e seguir apesar dele.",
     "Cada passo, por menor que seja, te aproxima do seu objetivo.",
@@ -16,29 +17,48 @@ const mensagens = [
     "Cada dificuldade carrega dentro dela uma oportunidade disfarçada."
 ]
 
-    document.addEventListener('DOMContentLoaded', function() {
-        let ultimaMensagem = null;
-        document.querySelector('#botao-mensagem').addEventListener('click', function () {
-            let aleatorio = null;
+// Função para exibir uma nova mensagem
+    function exibirMensagem() {
+    let ultimaMensagem = null;
+    const mensagemElement = document.querySelector('#mensagem');
+    const botaoMensagem = document.querySelector('#botao-mensagem');
 
-            do {
-                aleatorio = Math.floor(Math.random() * mensagens.length);
-            } while (aleatorio === ultimaMensagem)
+    return () => {
+        let aleatorio;
+        do {
+            aleatorio = Math.floor(Math.random() * mensagens.length);
+        } while (aleatorio === ultimaMensagem);
 
-            ultimaMensagem = aleatorio;
-            
-            let mensagem = document.querySelector('#mensagem');
-            mensagem.innerHTML = mensagens[aleatorio];
+        ultimaMensagem = aleatorio;
+        mensagemElement.textContent = mensagens[aleatorio];
 
-            let trocarTexto = document.querySelector('#botao-mensagem')
-            if (trocarTexto.innerHTML === 'Clique para ver uma mensagem!') {
-                trocarTexto.innerHTML = 'Clique denovo para exibir outra mensagem!';
-            } 
-        })       
-    })
+        if (botaoMensagem.textContent === 'Clique para ver uma mensagem!') {
+            botaoMensagem.textContent = 'Clique denovo para exibir outra mensagem!';
+        }
+    };
+}
 
-    let body = document.querySelector('body');
-    document.querySelector('#trocar-tema').addEventListener('click', function () {
-        body.classList.toggle('dark');
-    })
+// Função para alternar tema com acessibilidade
+function alternarTema() {
+    const body = document.querySelector('body');
+    const botaoTema = document.querySelector('#trocar-tema');
+    body.classList.toggle('dark');
+    const isDark = body.classList.contains('dark');
+    botaoTema.setAttribute('aria-label', `Trocar para modo ${isDark ? 'claro' : 'escuro'}`);
+}
+
+// Inicializar eventos
+document.addEventListener('DOMContentLoaded', () => {
+    const botaoMensagem = document.querySelector('#botao-mensagem');
+    const botaoTema = document.querySelector('#trocar-tema');
+
+    // Verificar se os elementos existem
+    if (!botaoMensagem || !botaoTema || !document.querySelector('#mensagem')) {
+        console.error('Elementos necessários não encontrados no DOM');
+        return;
+    }
+
+    botaoMensagem.addEventListener('click', exibirMensagem());
+    botaoTema.addEventListener('click', alternarTema);
+});
     
